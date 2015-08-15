@@ -1,0 +1,8 @@
+User-Agent: *
+Allow: /
+Disallow: /*.old/
+Disallow: /old.*/
+Disallow: /*.del/
+Disallow: /del.*/
+Disallow: /www.*/
+Disallow: /*.com/
