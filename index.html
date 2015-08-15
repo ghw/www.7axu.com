@@ -32,7 +32,7 @@
 						</nav>
 					</header>
 					<footer id="footer">
-					<!--<p><span class="beian"><a href="" target="_blank" rel="nofollow"></a></span></p>-->
+					<p><span class="beian" id="span_dt_dt"></span></p>
 					<p><span class="copyright">Copyright &copy; 2011 - 2015 7AXU. All rights reserved.</span></p>
 					</footer>
 			</div>
@@ -41,6 +41,25 @@
 			window.onload = function() { document.body.className = ''; }
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+		<script>
+			function show_date_time(){
+			window.setTimeout("show_date_time()", 1000);
+			BirthDay=new Date("9/19/2011 00:00:00");
+			today=new Date();
+			timeold=(today.getTime()-BirthDay.getTime());
+			sectimeold=timeold/1000
+			secondsold=Math.floor(sectimeold);
+			msPerDay=24*60*60*1000
+			e_daysold=timeold/msPerDay
+			daysold=Math.floor(e_daysold);
+			e_hrsold=(e_daysold-daysold)*24;
+			hrsold=Math.floor(e_hrsold);
+			e_minsold=(e_hrsold-hrsold)*60;
+			minsold=Math.floor((e_hrsold-hrsold)*60);
+			seconds=Math.floor((e_minsold-minsold)*60);
+			span_dt_dt.innerHTML="本站累计已运行"+daysold+"天"+hrsold+"小时"+minsold+"分"+seconds+"秒";}
+			show_date_time();
 		</script>
 	</body>
 </html>
