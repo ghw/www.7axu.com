@@ -32,7 +32,7 @@
 						</nav>
 					</header>
 					<footer id="footer">
-					<p><span class="beian" id="span_dt_dt"></span></p>
+					<p><span class="beian" id="bdtime"></span></p>
 					<p><span class="copyright">Copyright &copy; 2011 - 2015 7AXU.COM. All rights reserved.</span></p>
 					</footer>
 			</div>
@@ -42,24 +42,41 @@
 			window.ontouchmove = function() { return false; }
 			window.onorientationchange = function() { document.body.scrollTop = 0; }
 		</script>
-		<script>
-			function show_date_time(){
-			window.setTimeout("show_date_time()", 1000);
-			BirthDay=new Date("9/19/2011 00:00:00");
-			today=new Date();
-			timeold=(today.getTime()-BirthDay.getTime());
-			sectimeold=timeold/1000
-			secondsold=Math.floor(sectimeold);
-			msPerDay=24*60*60*1000
-			e_daysold=timeold/msPerDay
-			daysold=Math.floor(e_daysold);
-			e_hrsold=(e_daysold-daysold)*24;
-			hrsold=Math.floor(e_hrsold);
-			e_minsold=(e_hrsold-hrsold)*60;
-			minsold=Math.floor((e_hrsold-hrsold)*60);
-			seconds=Math.floor((e_minsold-minsold)*60);
-			span_dt_dt.innerHTML="累计已运行"+daysold+"天"+hrsold+"时"+minsold+"分"+seconds+"秒";}
-			show_date_time();
+		<script type="text/javascript">
+		<!--
+		function bdays(){
+			var birthday = new Date("Tues Sep 19 00:00:00 UTC+0000 2011");
+			var btime = birthday.getTime();
+			var nowtime = new Date();
+			var ntime = nowtime.getTime();
+			var time_cha = ntime - btime;
+			var msecond_second = 1000;
+			var msecond_minute = 60000;
+			var msecond_hour = 3600000;
+			var msecond_day = 86400000;
+			var msecond_year = 31536000000;
+			var year_cha = Math.floor(time_cha/msecond_year);
+			var day_cha = Math.floor((time_cha%msecond_year)/msecond_day);
+			var hour_cha = Math.floor((time_cha%msecond_day)/msecond_hour);
+			var minute_cha = Math.floor((time_cha%msecond_hour)/msecond_minute);
+			var second_cha = Math.floor((time_cha%msecond_minute)/msecond_second);
+			//var msecond_cha = Math.floor(time_cha%msecond_second);
+			year_cha = year_cha<10 ? '0' + year_cha : year_cha;
+			day_cha = day_cha<10 ? '0' + day_cha : day_cha;
+			hour_cha = hour_cha<10 ? '0' + hour_cha : hour_cha;
+			minute_cha = minute_cha<10 ? '0' + minute_cha : minute_cha;
+			second_cha = second_cha<10 ? '0' + second_cha : second_cha;
+			//msecond_cha = msecond_cha<10 ? '00' + msecond_cha : (msecond_cha<100 ? '0' + msecond_cha : msecond_cha);
+			var str = year_cha + '年' + day_cha + '天' + hour_cha + '时' + minute_cha + '分' + second_cha + '秒';
+			//var str = year_cha + '年' + day_cha + '天' + hour_cha + '小时' + minute_cha + '分钟' + second_cha + '秒' + msecond_cha + '毫秒';
+			//str = "<font color='red'><strong>" + str + "</strong></font>";
+			//document.write(str);
+			document.getElementById('bdtime').innerHTML = str;
+			//setInterval("bdays()", 1);
+			}
+			//setTimeout("bdays()", 1); //clearTimeout(obj)
+			setInterval(bdays, 1);  //clearInterval(obj);
+			//-->
 		</script>
 	</body>
 </html>
