@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html lang="zh-Hans">
+<!--
+	This is my personal home page
+	For more copyright information, see: https://www.gehaowu.com/copyright/
+-->
+	<head>
+		<title>Welcome to 7AXU domain sharing center!</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
+		<link rel="stylesheet" href="css/style.css" type="text/css" />
+		<script type="text/javascript" src="js/baidu-analytics.js" async="async" defer="defer"></script>
+	</head>
+	<body class="loading">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+					<header id="header">
+						<h1>不&nbsp;忘&nbsp;初&nbsp;心</h1>
+					<p>Welcome to 7AXU domain sharing center!</p>
+					<p>欢迎来到 7AXU 域名分享中心！</p>
+						<nav>
+							<ul>
+								<li><a href="http://gehaowu.7axu.com" class="icon user-secret"><span class="label">Ge Haowu's Personal Homepage!</span></a></li>
+								<li><a href="http://eleveni386.7axu.com/" class="icon user-secret"><span class="label">Eleven.I386's Blog</span></a></li>
+								<li><a href="https://www.gehaowu.com/" class="icon user-secret"><span class="label">Welcome to Ge Haowu&apos;s Personal Homepage!</span></a></li>
+								<br>
+								<li><a href="https://www.daemon.xin/" class="icon user-secret"><span class="label">Hello World | Just So So ...</span></a></li>
+								<li><a href="#" class="icon user-secret"><span class="label">#</span></a></li>
+								<li><a href="#" class="icon user-secret"><span class="label">#</span></a></li>
+							</ul>
+						</nav>
+					</header>
+					<footer id="footer">
+					<p><span class="beian" id="bdtime"></span></p>
+					<p><span class="copyright">Copyright &copy; 2011 - 2016 7AXU.COM. All rights reserved.</span></p>
+					</footer>
+			</div>
+		</div>
+		<script>
+			window.onload = function() { document.body.className = ''; }
+			window.ontouchmove = function() { return false; }
+			window.onorientationchange = function() { document.body.scrollTop = 0; }
+		</script>
+		<script type="text/javascript">
+		<!--
+		function bdays(){
+			var birthday = new Date("Tues Sep 19 00:00:00 UTC+0000 2011");
+			var btime = birthday.getTime();
+			var nowtime = new Date();
+			var ntime = nowtime.getTime();
+			var time_cha = ntime - btime;
+			var msecond_second = 1000;
+			var msecond_minute = 60000;
+			var msecond_hour = 3600000;
+			var msecond_day = 86400000;
+			var msecond_year = 31536000000;
+			var year_cha = Math.floor(time_cha/msecond_year);
+			var day_cha = Math.floor((time_cha%msecond_year)/msecond_day);
+			var hour_cha = Math.floor((time_cha%msecond_day)/msecond_hour);
+			var minute_cha = Math.floor((time_cha%msecond_hour)/msecond_minute);
+			var second_cha = Math.floor((time_cha%msecond_minute)/msecond_second);
+			//var msecond_cha = Math.floor(time_cha%msecond_second);
+			year_cha = year_cha<10 ? '0' + year_cha : year_cha;
+			day_cha = day_cha<10 ? '0' + day_cha : day_cha;
+			hour_cha = hour_cha<10 ? '0' + hour_cha : hour_cha;
+			minute_cha = minute_cha<10 ? '0' + minute_cha : minute_cha;
+			second_cha = second_cha<10 ? '0' + second_cha : second_cha;
+			//msecond_cha = msecond_cha<10 ? '00' + msecond_cha : (msecond_cha<100 ? '0' + msecond_cha : msecond_cha);
+			var str = '累计已运行' + year_cha + '年' + day_cha + '天' + hour_cha + '小时' + minute_cha + '分' + second_cha + '秒';
+			//var str = year_cha + '年' + day_cha + '天' + hour_cha + '小时' + minute_cha + '分钟' + second_cha + '秒' + msecond_cha + '毫秒';
+			//str = "<font color='red'><strong>" + str + "</strong></font>";
+			//document.write(str);
+			document.getElementById('bdtime').innerHTML = str;
+			//setInterval("bdays()", 1);
+			}
+			//setTimeout("bdays()", 1); //clearTimeout(obj)
+			setInterval(bdays, 1);  //clearInterval(obj);
+			//-->
+		</script>
+	</body>
+</html>

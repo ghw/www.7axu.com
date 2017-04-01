@@ -1,83 +1,66 @@
-<!DOCTYPE HTML>
-<html lang="zh-Hans">
-<!--
-	This is my personal home page
-	For more copyright information, see: https://www.gehaowu.com/copyright/
--->
-	<head>
-		<title>Welcome to 7AXU domain sharing center!</title>
-		<meta http-equiv="content-type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="minimal-ui,width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0" />
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
-		<script type="text/javascript" src="js/baidu-analytics.js" async="async" defer="defer"></script>
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
-					<header id="header">
-						<h1>不&nbsp;忘&nbsp;初&nbsp;心</h1>
-					<p>Welcome to 7AXU domain sharing center!</p>
-					<p>欢迎来到 7AXU 域名分享中心！</p>
-						<nav>
-							<ul>
-								<li><a href="http://gehaowu.7axu.com" class="icon user-secret"><span class="label">Ge Haowu's Personal Homepage!</span></a></li>
-								<li><a href="http://eleveni386.7axu.com/" class="icon user-secret"><span class="label">Eleven.I386's Blog</span></a></li>
-								<li><a href="https://www.gehaowu.com/" class="icon user-secret"><span class="label">Welcome to Ge Haowu&apos;s Personal Homepage!</span></a></li>
-								<br>
-								<li><a href="https://www.daemon.xin/" class="icon user-secret"><span class="label">Hello World | Just So So ...</span></a></li>
-								<li><a href="#" class="icon user-secret"><span class="label">#</span></a></li>
-								<li><a href="#" class="icon user-secret"><span class="label">#</span></a></li>
-							</ul>
-						</nav>
-					</header>
-					<footer id="footer">
-					<p><span class="beian" id="bdtime"></span></p>
-					<p><span class="copyright">Copyright &copy; 2011 - 2016 7AXU.COM. All rights reserved.</span></p>
-					</footer>
-			</div>
-		</div>
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-		<script type="text/javascript">
-		<!--
-		function bdays(){
-			var birthday = new Date("Tues Sep 19 00:00:00 UTC+0000 2011");
-			var btime = birthday.getTime();
-			var nowtime = new Date();
-			var ntime = nowtime.getTime();
-			var time_cha = ntime - btime;
-			var msecond_second = 1000;
-			var msecond_minute = 60000;
-			var msecond_hour = 3600000;
-			var msecond_day = 86400000;
-			var msecond_year = 31536000000;
-			var year_cha = Math.floor(time_cha/msecond_year);
-			var day_cha = Math.floor((time_cha%msecond_year)/msecond_day);
-			var hour_cha = Math.floor((time_cha%msecond_day)/msecond_hour);
-			var minute_cha = Math.floor((time_cha%msecond_hour)/msecond_minute);
-			var second_cha = Math.floor((time_cha%msecond_minute)/msecond_second);
-			//var msecond_cha = Math.floor(time_cha%msecond_second);
-			year_cha = year_cha<10 ? '0' + year_cha : year_cha;
-			day_cha = day_cha<10 ? '0' + day_cha : day_cha;
-			hour_cha = hour_cha<10 ? '0' + hour_cha : hour_cha;
-			minute_cha = minute_cha<10 ? '0' + minute_cha : minute_cha;
-			second_cha = second_cha<10 ? '0' + second_cha : second_cha;
-			//msecond_cha = msecond_cha<10 ? '00' + msecond_cha : (msecond_cha<100 ? '0' + msecond_cha : msecond_cha);
-			var str = '累计已运行' + year_cha + '年' + day_cha + '天' + hour_cha + '小时' + minute_cha + '分' + second_cha + '秒';
-			//var str = year_cha + '年' + day_cha + '天' + hour_cha + '小时' + minute_cha + '分钟' + second_cha + '秒' + msecond_cha + '毫秒';
-			//str = "<font color='red'><strong>" + str + "</strong></font>";
-			//document.write(str);
-			document.getElementById('bdtime').innerHTML = str;
-			//setInterval("bdays()", 1);
-			}
-			//setTimeout("bdays()", 1); //clearTimeout(obj)
-			setInterval(bdays, 1);  //clearInterval(obj);
-			//-->
-		</script>
-	</body>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>比特萌·信息</title>
+<style>
+	body{
+		background:#eeeeee;
+	}
+	#view{perspective: 500px;width:200px;height:200px;margin: 200px auto;perspective-origin: 250px 100px;}
+	@keyframes scroll{
+		100%{
+			transform: rotate3d(1,1,1,360deg);
+		}
+	}	
+	#cube{width:200px;height:200px;position: relative; animation: scroll 2s linear 7s infinite;transform-style: preserve-3d;}
+	.item{
+		width: 200px;
+		height:200px;
+		border: 1px solid black;
+		font-size:150px;
+		text-align:center;
+		background:yellow;
+		opacity: 0.7;
+		position:absolute;
+	}
+	@keyframes item1 {
+		100%{transform: rotateY(-90deg);}
+	}
+	@keyframes item2 {
+		100%{transform: rotateY(90deg);}
+	}
+	@keyframes item3 {
+		100%{transform: rotateX(90deg);}
+	}
+	@keyframes item4 {
+		100%{transform: rotateX(-90deg);}
+	}
+	@keyframes item5 {
+		100%{transform: translateZ(200PX);}
+	}
+	@keyframes item6 {
+		100%{transform: rotateY(180deg);}
+	}
+	#item1{z-index: 6;background:yellow; transform-origin: left; animation: item1 1s linear 1s both;}
+	#item2{z-index: 5;background:red; transform-origin: right; animation: item2 1s linear 2s both;}
+	#item3{z-index: 4;background:green; transform-origin: top; animation: item3 1s linear 3s both;}
+	#item4{z-index: 3;background:blue; transform-origin: bottom; animation: item4 1s linear 4s both;}
+	#item5{z-index: 2;background:silver; transform-origin: center; animation: item5 1s linear 5s both;}
+	#item6{z-index: 1;background:pink; transform-origin: center; animation: item6 1s linear 6s both;}
+</style>
+</head>
+<body>
+<div id="view">
+	<div id="cube">
+		<div class="item" id="item1">比</div>
+		<div class="item" id="item2">特</div>
+		<div class="item" id="item3">萌</div>
+		<div class="item" id="item4">·</div>
+		<div class="item" id="item5">信</div>
+		<div class="item" id="item6">息</div>
+	</div>
+</div>
+</div>
+</body>
 </html>
